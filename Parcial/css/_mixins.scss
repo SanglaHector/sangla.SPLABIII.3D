@@ -1,0 +1,7 @@
+@mixin mx_footer_header($color:black)/* por defecto va a ser negro a menos que le diga lo contrario*/
+{
+    background-color:$color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

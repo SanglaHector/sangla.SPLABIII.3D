@@ -1,0 +1,1 @@
+let numero:number = 3;

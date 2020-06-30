@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src=".\js\scripts.js" type="module"></script>
+     <link rel="shortcut icon" href="./img/firma.svg">
+    <title>Parcial</title>
+</head>
+<body>
+    <div class="container-fluid" style="background-color: rgb(206, 93, 27);height:100px;">
+        <div class="row justify-content-start">
+                <div class="col col-5 pt-4">
+                   <img src="./img/perro2.svg" alt="" height="100px" class="pb-5 ">
+                </div>
+                <div class="col col-7 pt-4">
+                    <nav class="navbar justify-content-end">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#SectionNosotros" class="nav-link text-white">Nosotros</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#SectionAnuncios" class="nav-link text-white">Anuncios</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#SectionBlog" class="nav-link text-white">Blog</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#SectionContacto" class="nav-link text-white">Contacto</a>
+                            </li>
+                        </ul>   
+                    </nav>
+                </div>
+        </div>
+    </div>
+    <div class="containter">
+        <div class="row justify-content-center">
+            <h3 class="font-weight-light" id="SectionAnuncios">
+                Administracion
+            </h3>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-image: url(./img/woman2.jpg);height: 80vh; background-position:center;"id='header'>
+    </div>
+    <br/>
+    <div class="container border border-dark pt-5 pb-5" id="tabla">
+        <form action="">
+            <fieldset class="form-group">
+                <legend>Informacion del anuncio</legend>
+                <div class="form-group">
+                    <label for="txtId">Numero de publicacion</label>
+                    <input type="text" class="form-control"placeholder="Numero de publicacion" id="txtId" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="txtTitulo">Titulo</label>
+                    <input type="text" class="form-control"placeholder="Titulo" id="txtTitulo" required>
+                </div>
+            <div class="form-group">
+                <label for="txtDescripcion">Descripcion</label>
+                <input type="text"placeholder="Descripcion" class="form-control" id="txtDescripcion" required>
+            </div>
+            <div class="row justify-content-center">
+                <div class="form-group" id="animal">
+                    <label for="checkAnimal">Animal</label>
+                    <div class="custom-control custom-radio custom-control-inline" >
+                        <input type="radio" id="perro" name="animal" class="custom-control-input"required >
+                        <label class="custom-control-label" for="perro">Perro</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="gato" name="animal" class="custom-control-input">
+                        <label class="custom-control-label" for="gato">Gato</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="txtPrecio">Precio</label>
+                <input type="number"placeholder="Precio" class="form-control" id="txtPrecio" min="0" required>
+            </div>
+            <div class="row">
+                <div class="col col-4">
+                    <div class="row">
+                        <div class="col col-4 form-group">
+                            <img src="./img/hueso.svg" alt="" class="img-fluid" style="height: 50px;">
+                        </div>
+                        <div class="col col-8">
+                            <div class="form-group">
+                                <input type="text" name="txtRaza" id="txtRaza" placeholder="Raza" class="form-control"required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4">
+                    <div class="row">
+                        <div class="custom-control  custom-control-inline">
+                            <img src="./img/ciguena.svg" alt="" class="img-fluid" style="height: 50px;">
+                            <input type="date"placeholder="Nacimiento" name="" id="date" class="form-control"required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4">
+                    <div class="row">
+                        <div class="col col-4">
+                            <img src="./img/jeringuilla.svg" alt="" class="img-fluid" style="height: 50px;">
+                        </div>
+                        <div class="col col-8">
+                            <label for="elegir">Vacuna</label>
+                            <select id="elegir" name="elegir" class="custom-select"required>
+                                <option value="Si" selected>Si</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="row">
+            <div class="col col-10">
+                <button type="submit" id="registrar" class="btn btn-primary mx-3">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    </svg>
+                    Guardar
+                </button>
+            </div>
+            <div class="col col-2">
+                <button class="btn btn-primary " id="btnLimpiar" type="button">
+                    Limpiar
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>
+                        <path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                </button>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="container py-5 " hidden id="contenedorPromedio">
+        <div class="row d-flex justify-content-around border border-dark">
+            <div class="col col-3">
+                <label for="selectAnimal">Seleccione filtro</label>
+                <select name="" id="selectAnimal" class="custom-select">
+                    <option value="PERRO">Perro</option>
+                    <option value="GATO">Gato</option>
+                    <option selected value="Ambos">Ambos</option>
+                </select>
+            </div>
+            <div class="col col-3">
+                <label for="promedio">Promedio de precios en $</label>
+                <input type="text" class="form-control"placeholder="Promedio" id="promedio" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-warning text-dark" id="checks">
+        <div class="row justify-content-center " >
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="TITULO"name="check"id="checkTitulo" checked> 
+                    <label class="form-check-label" for="checkTitulo">
+                      Titulo
+                    </label>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="TRANSACCION"name="check" id="checkTransaccion"checked>
+                    <label class="form-check-label" for="checkTransaccion">
+                      Transaccion
+                    </label>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="DESCRIPCION" name="check"id="checkDescipcion"checked>
+                    <label class="form-check-label" for="checkDescipcion">
+                      Descripcion
+                    </label>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="PRECIO"name="check" id="checkPrecio"checked>
+                    <label class="form-check-label" for="checkPrecio">
+                      Precio
+                    </label>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="ANIMAL"name="check" id="checkAnimal2"checked>
+                    <label class="form-check-label" for="checkAnimal2">
+                      Animal
+                    </label>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="RAZA"name="check" id="checkRaza"checked>
+                    <label class="form-check-label" for="checkRaza">
+                      Raza
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="FECHA"name="check" id="checkFecha"checked>
+                    <label class="form-check-label" for="checkFecha">
+                      Fecha
+                    </label>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="ELEGIR"name="check" id="checkVacuna"checked>
+                    <label class="form-check-label" for="checkVacuna">
+                      Vacuna
+                    </label>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="ID"name="check" id="checkId"checked>
+                    <label class="form-check-label" for="checkId">
+                      Id
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conteiner px-5" id="paraTabla"></div>
+    <div class="conteiner-fluid" >
+        <div class="row justify-content-end px-5"id="botones">
+            <div class="btn-group" role="group">
+                <div class="btn-group dropright">
+                    <!-- <button class="btn btn-outline-warning btn-lg " type="button" id="btnFiltrar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" hidden>
+                        Filtrar
+                    </button> 
+                    <button type="button" class="btn btn-outline-warning  dropdown-toggle dropdown-toggle-split" id="flecha" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" hidden>
+                            <span class="sr-only">Toggle Dropdown</span>
+                    </button>-->
+                    <div class="dropdown-menu">
+                        <select id="selectFiltros" multiple="multiple" name="filtros" class="custom-select dropdown-item"required>
+                        </select>
+                     </div>
+                </div>
+                <button class="btn-outline-warning btn-lg" id="btnBuscar">Buscar</button>
+                <button class="btn-outline-warning btn-lg" id="btnModificar">Modificar</button>
+                <button class="btn-outline-warning btn-lg" id="btnEliminar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid justify-content-center" style="background-color: rgb(206, 93, 27);height:100px;">
+        <div class="row justify-content-start">
+                <div class="col col-9  pt-4">
+                    <nav class="navbar justify-content-start">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#SectionNosotros" class="nav-link text-white">Nosotros</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#SectionAnuncios" class="nav-link text-white">Anuncios</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#SectionBlog" class="nav-link text-white">Blog</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#SectionContacto" class="nav-link text-white">Contacto</a>
+                            </li>
+                        </ul>   
+                    </nav>
+                </div>
+                <div class="col col-3">
+                    <p class="text-white pt-5">Todos los derechos recervados &copy</p>
+                </div>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+</html>
